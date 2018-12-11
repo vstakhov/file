@@ -604,7 +604,7 @@ magic_setparam(struct magic_set *ms, int param, const void *val)
 		ms->elf_notes_max = (uint16_t)*(const size_t *)val;
 		return 0;
 	case MAGIC_PARAM_REGEX_MAX:
-		ms->regex_max = (uint16_t)*(const size_t *)val;
+		ms->regex_max = *(const size_t *)val;
 		return 0;
 	case MAGIC_PARAM_BYTES_MAX:
 		ms->bytes_max = *(const size_t *)val;
